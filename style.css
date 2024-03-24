@@ -1,0 +1,110 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Helvetica, sans-serif;
+}
+
+@font-face {
+   font-family: 'ds-digital';
+   src: url(../fontes/DS-DIGIB.TTF); format:('truetype');
+   font-weight: normal;
+}
+
+:root {
+   --black-clor: #212121;
+   --white-color: #f4f4f4;
+   --gray-color: #2d2d2d;
+   --grenn-padrao:  #4caf50;
+   --red-padrao: #e53935;
+   --number: 'ds-digital';
+}
+
+body {
+   background-color: var(--black-clor);
+   color: var(--white-color);
+}
+
+main {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   box-shadow: inset 0 0 5px var(--white-color);
+   border-radius: 10px;
+}
+
+h1 {
+   font-size: 2.5rem;
+   color: var(--grenn-padrao);
+   font-family: var(--number);
+}
+
+.clock {
+   background-color: var(--black-clor);
+   border: 3px solid var(--white-color);
+   box-shadow: inset 0 0 20px var(--white-color);
+   width: 250px;
+   height: 250px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 2rem 0;
+}
+
+.numbers {
+   position: relative;
+}
+
+#mili-second {
+   position: absolute;
+   top: 5px;
+   font-size: 0.8rem;
+}
+
+.clock span {
+   font-size: 2rem;
+   font-family: var(--number);
+}
+
+button {
+   cursor: pointer;
+   border: none;
+   outline: none;
+   padding: 0.8rem 1.75rem;
+   border-radius: 6px;
+   font-size: 1.5rem;
+   color: var(--black-clor);
+   transition: ease-in-out 300ms;
+}
+
+i {
+   margin-left: 0.5rem;
+}
+
+#start {
+   background-color: var(--grenn-padrao);
+}
+
+#start:hover {
+   background-color: hsl(122, 39%, 39%);
+}
+
+#stop {
+   background-color: var(--red-padrao);
+}
+
+#stop:hover {
+   background-color: hsl(1, 77%, 45%);
+}
+
+#restart {
+   background-color: hsl(300, 100%, 38%);
+}
+
+#restart:hover {
+   background-color: hsl(300, 100%, 28%);
+}
